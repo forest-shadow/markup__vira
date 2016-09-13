@@ -1,0 +1,30 @@
+/* helpers classes */
+input {
+    transition: box-shadow 1s;
+}
+a:focus {
+    outline: none;
+}
+i {
+    display: inline-block;
+}
+
+/*********************************************
+ * Basic site layout
+ *********************************************/
+body {
+    font-size: 14px;
+    font-family: 'Roboto Light', sans-serif;
+}
+.site-wrapper {
+    @include outer-container-fixed( 1280px );
+    background-color: #f3f6f7;
+
+    & > * {
+        float: left;
+    }
+}
+.content-wrapper {
+    width: 1180px;
+    margin-left: 100px; //-
+}

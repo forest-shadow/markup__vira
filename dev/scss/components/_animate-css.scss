@@ -1,0 +1,11 @@
+.fadeInLeft {
+    @include fadeInLeft();
+}
+
+.pulse-infinite {
+    @include pulse(infinite);
+}
+
+.flipInY {
+    @include flipInY();
+}

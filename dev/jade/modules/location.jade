@@ -1,0 +1,29 @@
+section.contacts__yandex-map-block
+    script(src="//api-maps.yandex.ru/2.0/?load=package.standard,package.traffic&lang=ru")
+    script.
+        ymaps.ready(init); 
+        function init() { 
+            var coord = [ 59.925881, 30.378608 ]; 
+            var map = new ymaps.Map(
+                    'yandex-map', 
+                    {
+                        center: [ 59.925881, 30.378608 ],
+                        zoom: 15,controls: [ 'mapTools' ]
+                    } );
+            var myPlacemark = new ymaps.Placemark( 
+                    coord, 
+                    { 
+                        'balloonContent': "FlatFond, Невский пр. 147",
+                        'balloonHeader': "Санкт-Петербург, Невский пр. 147"
+                    }, 
+                    { 
+                        'iconImageHref': "images/icons/balloon.png", 
+                        'iconImageSize': [39,58], 
+                        'iconImageOffset': [-20, -55]  
+                    } ); 
+            map.geoObjects.add(myPlacemark); 
+            map.controls.add('zoomControl');
+        }
+
+    h2.section-header Местоположение
+    #yandex-map

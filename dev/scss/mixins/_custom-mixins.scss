@@ -1,0 +1,52 @@
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin slickSlideBWArrows() {
+    .slick-prev,
+    .slick-next {
+        top: 50%;
+        margin-top: -20px;
+
+        &:before {
+            content: '';
+        }
+        @include size( 40px )
+    }
+
+    .slick-prev {
+        left: -38px;
+        background: url( 'images/icons/prev_filled_white.png' ) center center no-repeat;
+
+        &:hover {
+            background: url(' images/icons/prev_filled_black.png' ) center center no-repeat;
+        }
+    }
+
+    .slick-next {
+        right: -38px;
+        background: url( 'images/icons/next_filled_white.png' ) center center no-repeat;
+
+        &:hover {
+            background: url(' images/icons/next_filled_black.png' ) center center no-repeat;
+        }
+    }
+}
+
+@mixin slickSlideWhiteRoundArrows() {
+    .slick-prev,
+    .slick-next {
+        @include size( 40px );
+        &:before {
+            content: '';
+        }
+    }
+    .slick-prev {
+        background: url(images/icons/promoslider-prev--white.png) left top no-repeat;
+    }
+
+    .slick-next {
+        background: url(images/icons/promoslider-next--white.png) left top no-repeat;
+    }
+}

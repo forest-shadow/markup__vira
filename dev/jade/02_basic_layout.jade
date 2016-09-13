@@ -1,0 +1,82 @@
+extends layout/demo_layouts/docwrapper
+
+append config
+    //- var PageTitle = "Page Title for current page!"
+    - var MetaDesc = "Meta Description for current page!!!"
+    - var jQuery = true
+    - var updateBodyClass = BodyClasses.push('extraclass', 'secondclass')
+    - var thisPage = "JS Processes and Jade Vars"
+    - var PageTitle = PageTitle.concat(' | ' + thisPage)
+    
+
+//- block title
+//-    | Page Title
+
+//- This mixin iterates through and creates each menu item
+mixin navmenu(menu_items)
+    .navmenu
+        ul
+            each top_item in menu_items
+                li
+                    +navlinks(top_item)
+                    if top_item.child
+                        ul
+                            each child_item in top_item.child
+                                li
+                                    +navlinks(child_item)
+
+//- This mixin generates the links
+mixin navlinks(item)
+    - var linkatts = { 'href': item.link }
+    a()&attributes(linkatts)= item.title
+
+block content
+    h1
+        | #{PageTitle}
+    p If you’re not using Jade, you’re missing out on some of the fastest HTML you’ll ever produce as well as boilerplate
+        | templating methods that will slash your development time in half.
+    ul
+        li: a(href="#") Link One
+        li: a(href="#") Link Two
+        li: a(href="#") Link Three
+        li: a(href="#") Link Four
+        li: a(href="#") Link Five
+    p In “Top Speed HTML Dev with Jade” you’ll learn how to generate full HTML from quick and easy shorthand. You’ll then
+        | build on that foundation to create infinitely reusable templates so you never write the same code twice again.
+        | Let’s begin!
+
+    h3 Do we have jQuery?
+
+    code#gotjquery Nope, no
+
+    // Write JS inline by prefacing it with: script.
+    script.
+        if (window.jQuery) {
+            $('#gotjquery').html("Yes, we have jQuery");
+        }
+
+    p(style = "font-family:Poiret One;font-size:2em") By concatenating to the "GoogleFonts" variable we've also loaded the extra font Poiret One
+    p You can also use JavaScript math processes on Jade vars.For example, let's start with the number:
+    - var start_num = 2254.3665
+
+    code #{start_num}
+
+    p Now let's use JavaScript's <code>floor()</code> method to round it down to the nearest whole number:
+
+    - var rounded_down = Math.floor(start_num)
+
+    code #{rounded_down}
+
+    //- Run mixin, passing a JS object through it from which to build the menu
+    +navmenu([
+        { 'title':'Home', 'link':'index.htm' },
+        { 'title':'About My Work', 'link':'about.htm',
+            'child': [
+                { 'title':'Noteable Clients', 'link':'clients.htm' },
+                { 'title':'Behance Portfolio', 'link':'http://www.behance.net', 'type':'out_follow' },
+                { 'title':'Resume Download', 'link':'resume.doc', 'type': 'download' }
+            ]
+        },
+        { 'title':'Blog', 'link':'blog.htm' },
+        { 'title': 'Contact', 'link':'http://www.hostedform.com', 'type':'out_nofollow' }
+    ])

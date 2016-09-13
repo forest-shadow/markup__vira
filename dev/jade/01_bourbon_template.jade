@@ -1,0 +1,183 @@
+include modules/mixins
+extends layout/demo_layouts/bourbon_layout
+
+block content
+    .container(style="width: 1280px; margin: 0 auto;")
+        h2 Accordion tabs stylyzed
+        ul.accordion-tabs
+            li.tab-header-and-content
+                a.is-active.tab-link(href="javascript:void(0)") Tab Item
+                div.tab-content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Another Tab
+                div.tab-content
+                    p Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.  
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Third
+                div.tab-content
+                    p Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Last item
+                div.tab-content
+                    p Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.
+                    
+                    
+        h2 Accordion Minimal
+        ul.accordion-tabs-minimal
+            li.tab-header-and-content
+                a.is-active.tab-link(href="javascript:void(0)") Tab Item
+                div.tab-content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla.
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Another Tab
+                div.tab-content
+                    p Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue.
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Third
+                div.tab-content
+                    p Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris.
+            li.tab-header-and-content
+                a.tab-link(href="javascript:void(0)") Last item
+                div.tab-content
+                    p Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.                
+
+
+        h2 Cards
+        .cards
+            .card
+                .card-image
+                    img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png")
+                .card-header First Card
+                .card-copy
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.
+            .card
+                .card-image
+                    img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png")
+                .card-header Another Card
+                .card-copy
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.
+            .card
+                .card-image
+                    img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png")
+                .card-header The Last Card
+                .card-copy
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    
+        h2 Navigation
+        header.centered-navigation(role="banner")
+            .centered-navigation-wrapper
+                a.mobile-logo(href="javascript:void(0)")
+                    img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png", alt="Logo image")
+                nav(role="navigation")
+                    ul#js-centered-navigation-menu.centered-navigation-menu.show
+                        li.nav-link
+                            a(hred="javascript:void(0)") Products
+                        li.nav-link
+                            a(hred="javascript:void(0)") About Us
+                        li.nav-link
+                            a(hred="javascript:void(0)") Contact
+                        li.nav-link.logo
+                            a.logo(hred="javascript:void(0)")
+                                img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png", alt="Logo image")
+                        li.nav-link
+                            a(hred="javascript:void(0)") Testimonials               
+                        li#js-centered-more.nav-link.more
+                            a(href="javascript:void(0)") More
+                            ul.submenu
+                                li
+                                    a(href="javascript:void(0)") Submenu Item
+                                li
+                                    a(href="javascript:void(0)") Another Item
+                                li.more
+                                    a(href="javascript:void(0)") Item with submenu
+                                        ul.submenu.fly-out-right
+                                            li
+                                                a(href="javascript:void(0)") Sub-submenu Item
+                                            li
+                                                a(href="javascript:void(0)") Another Item
+                                li.more
+                                    a(href="javascript:void(0)") Another submenu
+                                        ul.submenu.fly-out-right
+                                            li
+                                                a(href="javascript:void(0)") Sub-submenu Item
+                                            li
+                                                a(href="javascript:void(0)") Another Item
+                                li.nav-link
+                                    a(href="javascript:void(0)") Sign up
+                                    
+                                    
+        h2 Search
+        form.search-bar(role="search")
+            input( type="search", placeholder="Enter Search" )
+            button( type="submit" )
+                img( src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png", alt="Search Icon" )
+                
+                
+        h2 Modal
+        .modal
+            label(for="modal-1")
+                .modal-trigger Click for Modal
+            input#modal-1.modal-state(type="checkbox")
+            .modal-fade-screen
+                .modal-inner
+                    .modal-close(for="modal-1")
+                    h1 Modal Title
+                    p.modal-intro Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima
+                    p.modal-content Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
+                    
+        h2 Parallax
+        #js-parallax-window.parallax-window
+            .parallax-static-content
+                b Parallax Window
+            #js-parallax-background.parallax-background
+            
+        h2 Pagination
+        .pagination
+            ul
+                li.page-prev
+                    a(href="javascript:void(0)") Prev
+                li
+                    ul
+                        li
+                            a(href="javascript:void(0)") 1
+                        li
+                            a(href="javascript:void(0)") 2 
+                        li
+                            a(href="javascript:void(0)") 3 
+                        li
+                            a(href="javascript:void(0)") 4 
+                        li
+                            a(href="javascript:void(0)") 5 
+                        li
+                            a(href="javascript:void(0)") 6 
+                        li
+                            a(href="javascript:void(0)") 7
+                li.page-next
+                    a(href="javascript:void(0)") Next
+                    
+        h2 Expander
+        .expander
+            a.expander-trigger.expander-hidden(href="javascript:void(0)") Expandable section
+            .expander-content
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero incidunt ad tempora consequuntur ducimus eaque autem.                                                           
+        
+        h2 Gapped Expander
+        .gapped-expander
+            a.gapped-expander-trigger.gapped-expander-hidden(href="javascript:void(0)") Expandable section
+            .gapped-expander-content
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit hic minus dignissimos, temporibus ad. Alias, tempora deleniti reiciendis facilis facere debitis. Aut, dolore. Beatae, minima ex nihil? Magni, quaerat. Perferendis quia voluptatem esse inventore. Illo optio dolores vero beatae dolorum voluptate ducimus perspiciatis, odit veniam nemo sequi ullam? Id inventore saepe est tempore expedita necessitatibus suscipit ullam delectus, illum magnam molestias recusandae excepturi voluptates sed labore distinctio reiciendis assumenda! Eveniet, amet velit vero, fuga, quos consectetur adipisci maiores, eaque laborum facilis ab! Fugit doloribus odio numquam blanditiis in iure, error, aperiam ducimus nostrum, dolore quidem, iste! Eius quod reprehenderit odit ad voluptatibus totam minima ipsum optio saepe quibusdam quas unde ducimus commodi, magnam est, inventore nihil perspiciatis repudiandae nobis. Obcaecati aspernatur amet, incidunt nisi ipsam at fugiat iusto officia maiores consequuntur magnam commodi, fugit vitae. Deleniti deserunt rerum ex, nesciunt fugit voluptas quisquam autem debitis quod facilis, assumenda magnam iure sint earum culpa quaerat odit! Quas explicabo, commodi totam maiores obcaecati quo aut et, rem eum cumque maxime laboriosam repellat alias? Fugiat vero saepe consequuntur amet, natus harum incidunt? Ab excepturi sunt dolorem incidunt eligendi vitae, nam autem. Maiores rerum eaque deleniti voluptatibus facere, nemo necessitatibus, rem sunt dolores officia ad, error dolore deserunt velit cupiditate. Fuga voluptas optio voluptatem minima veritatis dolore ipsum non odit beatae eaque. Sequi enim similique, blanditiis ad ipsum placeat dicta sint esse voluptatem aliquam! Accusamus totam ipsam corporis maiores delectus consectetur, ex vitae optio, minus ullam perferendis eaque fugit itaque aut. Molestias distinctio optio dolorum fugiat ab, suscipit neque commodi unde! Voluptatibus nam labore, architecto eos at ullam ea aut illo officia dolore, accusantium quod quis! Velit aliquid porro in illo ipsum rerum eum dignissimos, veniam aperiam reprehenderit iusto, debitis exercitationem suscipit nostrum doloribus ullam iste aspernatur vitae excepturi quos. Aut assumenda eaque doloremque!
+                
+        h2 Dropdown
+        .dropdown
+            .dropdown-container
+                p.dropdown-description Description
+                p.dropdown-button Click to select
+                ul.dropdown-menu.dropdown-select
+                    li Dropdown Menu Item
+                    li Another Item
+                    li Item Three
+                    li The Last One
+                    
+                    
+    script(src='./all.js', type='text/javascript')

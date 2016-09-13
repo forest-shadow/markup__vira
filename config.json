@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "src": [
+      "assets/desktop/css/*.css",
+      "assets/desktop/js/*.js"
+    ],
+    "dest": "dist/desktop"
+  },
+  "mobile": {
+    "src": [
+      "assets/mobile/css/*.css",
+      "assets/mobile/js/*.js"
+    ],
+    "dest": "dist/mobile"
+  }
+}
