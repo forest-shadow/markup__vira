@@ -154,10 +154,10 @@ gulp.task( 'images:vendor', function() {
         .pipe( gulp.dest( 'dist/images/vendor/' ) );
 });
 
-gulp.task( 'images:mockup', function() {
-    gulp.src( ['dev/images/mockup/**/*.*'] )
+gulp.task( 'images:mockups', function() {
+    gulp.src( ['dev/images/mockups/**/*.*'] )
         .pipe( imagemin() )
-        .pipe( gulp.dest( 'dist/images/mockup/' ) );
+        .pipe( gulp.dest( 'dist/images/mockups/' ) );
 });
 
 /*******************************
@@ -202,7 +202,7 @@ gulp.task('watch', function() {
     gulp.watch( 'dev/fonts/**/*', [ 'fonts' ] );
     gulp.watch( 'dev/scss/**/*.scss', [ 'sass', reload ] );
     gulp.watch( 'dev/js/**/*.js', [ 'scripts', reload ] );
-    gulp.watch( 'dev/images/**/*.*', [ 'images', 'images:vendor', 'images:mockup', 'images:spritesmith', reload ] );
+    gulp.watch( 'dev/images/**/*.*', [ 'images', 'images:vendor', 'images:mockups', 'images:spritesmith', reload ] );
 });
 
 
@@ -243,4 +243,4 @@ gulp.task( 'cleanDistDir', function( cb ) {
 /*******************************
  * Default Task
  *******************************/
-gulp.task( 'default', [ 'jade', 'fonts', 'sass', 'scripts', 'images', 'images:vendor', 'images:mockup', 'images:spritesmith', 'browsersync', 'watch' ] );
+gulp.task( 'default', [ 'jade', 'fonts', 'sass', 'scripts', 'images', 'images:vendor', 'images:mockups', 'images:spritesmith', 'browsersync', 'watch' ] );
