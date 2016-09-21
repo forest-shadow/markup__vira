@@ -17,4 +17,6 @@ html(lang="ru").no-js
         script(src='https://code.jquery.com/jquery-1.11.3.min.js', type='text/javascript')
         | <!--[if lt IE 9]>script(src="./scripts/html5shiv.min.js")<![endif]-->
     body(class=BodyClasses)
-        
+        include header
+        block content
+        include footer
