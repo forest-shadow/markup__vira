@@ -3,6 +3,14 @@
     background: rgba($color, $opacity);
 }
 
+@mixin haf-pseudo {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
 @mixin slickSlideBWArrows() {
     .slick-prev,
     .slick-next {
