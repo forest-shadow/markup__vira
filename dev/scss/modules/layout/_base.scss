@@ -13,8 +13,7 @@ i {
  * Basic site layout
  *********************************************/
 body {
-    font-size: 14px;
-    font-family: 'Roboto Light', sans-serif;
+
 }
 .site-wrapper {
     @include outer-container-fixed( 1280px );

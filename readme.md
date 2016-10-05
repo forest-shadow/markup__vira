@@ -1,10 +1,14 @@
-**Gulp markup scaffolder: Jade, Scss + Bourbon Family & js plugins integrated**
+# Gulp markup scaffolder: Jade, Scss + Bourbon Family & js plugins integrated**
 
-_Install_
+## Install
 
 Go to project's root folder and run
 
-`npm install`<br>
-`gulp`<br>
-...<br>
+```
+npm install
+gulp
+```
+
+**..some meditation time..**
+
 **profit!**
