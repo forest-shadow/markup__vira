@@ -1,4 +1,4 @@
-# Gulp markup scaffolder: Jade, Scss + Bourbon Family & js plugins integrated**
+# Gulp markup scaffolder: Jade, Scss + Bourbon Family & js plugins integrated
 
 ## Install
 
