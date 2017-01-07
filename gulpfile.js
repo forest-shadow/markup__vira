@@ -111,8 +111,8 @@ gulp.task( 'sass', function() {
        //}))
 
        .pipe(autoprefixer({ browsers: ['android 4', 'Safari < 9', '> 1%', 'IE 6-8', 'Firefox < 20', 'last 2 versions']}))
-       .pipe(sourcemaps.write( ))
        .pipe(rename( 'all.css' ))
+       .pipe(sourcemaps.write('.'))
        .pipe(gulp.dest('./dist/'));
 });
 
