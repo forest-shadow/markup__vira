@@ -1,3 +1,73 @@
 /*********************************************
  * Site header
  *********************************************/
+header.site-header {
+  @include linear-gradient( $dark-blue, $blue );
+  border-bottom: 2px solid $light-blue;
+  padding: 20px 0;
+
+  .site-wrapper {
+    width: 1250px;
+    max-width: 1250px;
+    display: flex;
+    @include justify-content( space-between );
+
+    &:after {
+      content: none;
+    }
+  }
+
+  a.site-logo {
+    width: 320px;
+    margin-top: 8px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  nav.site-nav {
+    margin-top: 24px;
+  }
+
+  .site-info {
+
+    .site-info__info-row {
+      margin-bottom: 3px;
+    }
+
+    a.site-phone {
+      font-family: "Russo One", sans-serif;
+      font-size: 26px;
+      line-height: 26px;
+      color: #fff;
+      text-decoration: none;
+      
+      span {
+        color: $light-blue;
+      }
+
+      @include haf-pseudo {
+        color: darken( #fff, 30% );
+
+        span {
+          color: darken( $light-blue, 30% );
+        }
+      }
+    }
+
+    .site-info__info-row--email {
+      margin-bottom: 10px;
+      text-align: right;
+
+      a.site-email {
+        color: #fff;
+        text-decoration: none;
+
+        @include haf-pseudo {
+          color: darken( #fff, 30% );
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,36 @@
+// site header start
 header.site-header
+    .site-wrapper
+
+        // site logo start
+        a.site-logo(href="#")
+            img(src="images/logo.png")
+        // site logo end
+
+        // site top navigation start
+        nav#top-nav.site-nav
+            ul
+                li
+                    a(href="#") Главная
+                li
+                    a(href="#") О компании
+                li
+                    a(href="#") Услуги
+                li
+                    a(href="#") Цены
+                li
+                    a(href="#") Фотогалерея
+                li
+                    a(href="#") Контакты
+        // site top navigation end
+
+        // site top info block start
+        .site-info
+            .site-info__info-row.site-info__info-row--phone
+                a.site-phone(href="tel:+79214051080") <span>+7 921</span> 405-10-80
+            .site-info__info-row.site-info__info-row--email
+                a.site-email(href="mailto:info@virgruz.ru") e-mail: info@virgruz.ru
+            a.btn-blue.js-leave-request(href="#") Оставить заявку
+        // site top info block end
+
+// site header end

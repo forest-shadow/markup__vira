@@ -1,12 +1,36 @@
 /* helpers classes */
 input {
-    transition: box-shadow 1s;
+  transition: box-shadow 1s;
 }
+
 a:focus {
-    outline: none;
+  outline: none;
 }
 i {
-    display: inline-block;
+  display: inline-block;
+}
+
+ul,
+ol {
+  margin-bottom: 16px;
+  margin-left: 20px;
+
+  li {
+    padding-left: 20px;
+  }
+}
+
+ul {
+  li {
+    position: relative;
+
+    &:before {
+      @include position( absolute, 0 null null 0 );
+      content: '•';
+      display: block;
+      color: #103b8a;
+    }
+  }
 }
 
 /*********************************************
@@ -15,6 +39,9 @@ i {
 body {
 
 }
+
 .site-wrapper {
-    @include outer-container-fixed( 1280px );
+  @include outer-container-fixed( 1140px );
+  min-width: 1140px;
+  position: relative;
 }

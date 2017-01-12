@@ -1,3 +1,36 @@
 /*********************************************
  * Buttons Styles
  *********************************************/
+.btn-blue {
+  width: 100%;
+  border: 2px solid #fff;
+  text-align: center;
+  padding: 6px;
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 18px;
+  background: #103889;
+  
+  @include haf-pseudo {
+    color: #fff;
+    background: darken( $light-blue, 10% );
+  }
+
+  &.btn-blue--smooth-hovered {
+    @include haf-pseudo {
+      color: #fff;
+      background: lighten( #103889, 10% );
+    }
+  }
+
+  &.btn-blue--blue-bordered {
+    border: 2px solid #5091CD;
+
+    @include haf-pseudo {
+      color: #fff;
+      background: #5091CD;
+    }
+  }
+}

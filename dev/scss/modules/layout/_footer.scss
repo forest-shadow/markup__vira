@@ -1,3 +1,172 @@
 /*********************************************
  * Footer Section
  *********************************************/
+footer.site-footer {
+  @include linear-gradient( $blue, $dark-blue );
+  border-top: 2px solid $light-blue;
+  padding: 25px 0;
+  color: #fff;
+
+  .site-wrapper {
+    width: 1250px;
+    max-width: 1250px;
+    display: flex;
+    @include justify-content( space-between );
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.site-footer__logo-block {
+  width: 316px;
+
+  a.site-logo {
+    display: block;
+    margin-bottom: 36px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  a.btn-blue {
+    margin-bottom: 42px;
+    font-weight: bold;
+
+    @include haf-pseudo {
+      background: #5091CD;
+    }
+  }
+
+  .copyrights {
+    font-size: 13px;
+
+    span {
+      display: block;
+      line-height: 15px;
+    }
+  }
+}
+
+.site-footer__services-block,
+.site-footer__contacts-block {
+  h3 {
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid rgba( 255, 255, 255, 0.7 );
+  }
+}
+
+.site-footer__services-block {
+  width: 512px;
+
+  .services-block__services-container {
+    @include clearfix();
+
+    ul {
+      margin-left: 0;
+      width: 50%;
+      float: left;
+
+      li {
+        padding-left: 14px;
+        margin-bottom: 1px;
+
+        &:before {
+          color: $light-blue;
+        }
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        
+        @include haf-pseudo {
+          color: darken( #fff, 25% );
+        }
+      }
+    }
+  }
+}
+
+.site-footer__contacts-block {
+  a.contacts-block__phone {
+    font-family: "Russo One", sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+
+    span {
+      color: $light-blue;
+    }
+
+    @include haf-pseudo {
+      color: darken( #fff, 30% );
+
+      span {
+        color: darken( $light-blue, 30% );
+      }
+    }
+  }
+
+  .contacts-block__contacts-row {
+    margin-bottom: 10px;
+
+    .label {
+      color: $light-blue;
+      padding-right: 6px;
+    }
+
+    span.contacts-info {
+      line-height: 16px;
+      display: inline-block;
+    }
+
+    a.contacts-info {
+      color: #fff;
+      text-decoration: none;
+
+      @include haf-pseudo {
+        color: darken( #fff, 30% );
+      }
+    }
+  }
+
+  .developed {
+    margin-top: 32px;
+    color: #fff;
+
+    a {
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+      padding-right: 30px;
+      display: inline-block;
+      vertical-align: top;
+
+      &:after {
+        @include position( absolute, 20px 0px null null );
+        @include size( 27px 17px );
+        display: inline-block;
+        background: url('images/icons/prana.png') left top no-repeat;
+        content: '';
+        margin-left: 6px;
+        transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+
+      @include haf-pseudo {
+        &:after {
+          @include position( absolute, 0 0px null null );
+        }
+      }
+    }
+  }
+}

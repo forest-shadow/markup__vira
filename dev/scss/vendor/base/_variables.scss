@@ -3,12 +3,12 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: 'Roboto Light', sans-serif;
+$base-font-family: 'Tahoma', sans-serif;
 //$heading-font-family: $base-font-family;
-$heading-font-family: 'Roboto Bold', sans-serif;
+$heading-font-family: 'Tahoma', sans-serif;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 14px;
 
 // Line height
 $base-line-height: 1.5;
@@ -21,7 +21,9 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
+$dark-blue: #1D1958;
+$blue: #1F50A4;
+$light-blue: #8DD8F8;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;

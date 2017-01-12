@@ -15,6 +15,8 @@ h6 {
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  color: #103b8a;
+  font-weight: 500;
 }
 
 p {
@@ -45,12 +47,23 @@ hr {
 * Site Types
 ****/
 
-//@font-face {
-//    font-family: "Roboto Light";
-//    src: url( "fonts/RobotoLight/RobotoLight.eot" );
-//    src: url( "fonts/RobotoLight/RobotoLight.eot?#iefix" )format( "embedded-opentype" ),
-//    url( "fonts/RobotoLight/RobotoLight.woff" ) format( "woff" ),
-//    url( "fonts/RobotoLight/RobotoLight.ttf" ) format( "truetype" );
-//    font-style: normal;
-//    font-weight: normal;
-//}
+@font-face {
+  font-family: "Ubuntu";
+  src: url( "fonts/Ubuntu/Ubuntu-Regular.ttf" ) format( "truetype" );
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url( "fonts/Tahoma/Tahoma.ttf" ) format( "truetype" );
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url( "fonts/Russo_One/Russo_One.ttf" ) format( "truetype" );
+  font-style: normal;
+  font-weight: normal;
+}

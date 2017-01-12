@@ -10,4 +10,232 @@ append config
     - var PageTitle         = PageTitle.concat(' | ' + thisPage)
     
 block content
-    
+    // banner section start
+    section.mainpage-slider.js-mainpage-slider
+        .mainpage-slider__slide(style="background: url('images/banner__main.jpg') center top no-repeat")
+            .site-wrapper
+                .slide-desc Все виды такелажных работ<br> в Санкт-Петербурге и Ленобласти
+        .mainpage-slider__slide(style="background: url('images/banner__main.jpg') center top no-repeat")
+            .site-wrapper
+                .slide-desc Все виды такелажных работ<br> в Санкт-Петербурге и Ленобласти
+        .mainpage-slider__slide(style="background: url('images/banner__main.jpg') center top no-repeat")
+            .site-wrapper
+                .slide-desc Все виды такелажных работ<br> в Санкт-Петербурге и Ленобласти
+    // banner section end
+
+    // greetings section start
+    section.greetings-section
+        .site-wrapper
+            h1 Рады приветствовать Вас на сайте такелажной компании <span>«Vira»</span>!
+            p Наша компания специализируется на <strong>такелажных работах и перевозке грузов</strong> специализированным
+              | автотранспортом. Качество услуг для нас всегда находится на почётном первом месте! При необходимости
+              | мы всегда готовы предоставить специальную технику в аренду на удобных условиях.
+    // greetings section end
+
+    // our services section start
+    section.our-services
+        .site-wrapper
+            h2 Наши услуги:
+
+            .our-services-carouesel.js-our-services-carousel
+
+                .our-services-item
+                    a.our-services-item__service-thumb(href="#")
+                        img(src="images/services-carousel__service-01.jpg")
+                    .service-desc-container
+                        a.our-services-item__service-header(href="#")
+                            | Такелаж<br> оборудования
+                        .our-services-item__service-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                            | odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                        a.btn-blue.btn-blue--smooth-hovered(href="#") Подробнее
+
+                .our-services-item
+                    a.our-services-item__service-thumb(href="#")
+                        img(src="images/services-carousel__service-02.jpg")
+                    .service-desc-container
+                        a.our-services-item__service-header(href="#")
+                            | Подъем и<br> перемещение грузов
+                        .our-services-item__service-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                            | odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                        a.btn-blue.btn-blue--smooth-hovered(href="#") Подробнее
+
+                .our-services-item
+                    a.our-services-item__service-thumb(href="#")
+                        img(src="images/services-carousel__service-03.jpg")
+                    .service-desc-container
+                        a.our-services-item__service-header(href="#")
+                            | Стропальные<br> работы
+                        .our-services-item__service-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                            | odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                        a.btn-blue.btn-blue--smooth-hovered(href="#") Подробнее
+
+                .our-services-item
+                    a.our-services-item__service-thumb(href="#")
+                        img(src="images/services-carousel__service-04.jpg")
+                    .service-desc-container
+                        a.our-services-item__service-header(href="#")
+                            | Монтаж и демонтаж оборудования
+                        .our-services-item__service-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                            | odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                        a.btn-blue.btn-blue--smooth-hovered(href="#") Подробнее
+
+                .our-services-item
+                    a.our-services-item__service-thumb(href="#")
+                        img(src="images/services-carousel__service-01.jpg")
+                    .service-desc-container
+                        a.our-services-item__service-header(href="#")
+                            | Такелаж<br> оборудования
+                        .our-services-item__service-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                            | odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                        a.btn-blue.btn-blue--smooth-hovered(href="#") Подробнее
+    // our services section end
+
+    // last photo galleries section start
+    section.last-photo-galleries
+        .site-wrapper
+            h2 Фотогалерея наших работ:
+
+            .photo-galleries-list
+
+                .photo-galleries-item
+                    span.photo-galleries-item__date 7 декабря 2016
+                    a.photo-galleries-item__gallery-header(href="#") Такелажные работы
+                    a.photo-galleries-item__gallery-thumb(href="#")
+                        img(src="images/gallery-thumb-01.jpg")
+                    .photo-galleries-item__desc Такелажные работы: разгрузка и <span>перемещение станка</span> по цеху весом 12 тонн на
+                        | ул. Трефолева, 12 в Санкт-Петербурге.
+                    .photo-galleries-item__customer.photo-galleries-item__customer--private-person
+                        span.customer-label Заказчик:
+                        img(src="images/icons/person.png")
+                        span.private-person-label частное лицо
+
+                .photo-galleries-item
+                    span.photo-galleries-item__date 7 декабря 2016
+                    a.photo-galleries-item__gallery-header(href="#") Перевозка сейфов
+                    a.photo-galleries-item__gallery-thumb(href="#")
+                        img(src="images/gallery-thumb-02.jpg")
+                    .photo-galleries-item__desc Такелажные работы: <span>перевозка сейфов</span> (2 шт. по 800кг.) с Большого
+                        | Сампсониевского пр., 14 на Комендатский пр., 36  в Санкт-Петербурге.
+                    .photo-galleries-item__customer
+                        span.customer-label Заказчик:
+                        img(src="images/customer-logo.png")
+
+                .photo-galleries-item
+                    span.photo-galleries-item__date 7 декабря 2016
+                    a.photo-galleries-item__gallery-header(href="#") Подъем груза в окно
+                    a.photo-galleries-item__gallery-thumb(href="#")
+                        img(src="images/gallery-thumb-03.jpg")
+                    .photo-galleries-item__desc Такелажные работы: разгрузка и <span>перемещение станка</span> по цеху весом 12 тонн на
+                        | ул. Трефолева, 12 в Санкт-Петербурге.
+                    .photo-galleries-item__customer.photo-galleries-item__customer--private-person
+                        span.customer-label Заказчик:
+                        img(src="images/icons/person.png")
+                        span.private-person-label частное лицо
+
+            .btn-more-container
+                a.btn-blue.btn-blue--blue-bordered(href="#") Смотреть все наши выполненные проекты
+    // last photo galleries section end
+
+    // our clients carousel section start
+    section.our-partners(style="background: url('images/bg__partners-carousel.jpg') center center no-repeat;")
+        .site-wrapper
+            h2 Наши клиенты и партнеры:
+
+            .our-partners-carousel.js-our-partners-carousel
+                img.our-partners-carousel__item(src="images/partners-carousel__client01.png")
+                img.our-partners-carousel__item(src="images/partners-carousel__client02.png")
+                img.our-partners-carousel__item(src="images/partners-carousel__client03.png")
+                img.our-partners-carousel__item(src="images/partners-carousel__client04.png")
+                img.our-partners-carousel__item(src="images/partners-carousel__client05.png")
+                img.our-partners-carousel__item(src="images/partners-carousel__client01.png")
+
+            .btn-more-container
+                a.btn-blue(href="#") Все наши клиенты <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    // our clients carousel section end
+
+    // leave request section start
+    section.leave-request-block
+        .site-wrapper(style="background: url(images/map.png) left 48px no-repeat;")
+            .leave-request-block__request-form-container
+                h2 Мы работаем по Санкт-Петербургу и Ленинградской области!
+                h3 У вас есть вопрос? Проконсультируем Вас бесплатно!
+                span.form-desc Звоните прямо сейчас по телефону: <a href="tel:+79214051080">+7 921 405-10-80</a><br> или заполните форму
+                    | обратной связи и мы свяжемся с вами:
+                form#request-form
+                    p
+                        input#name(type="text", name="name", placeholder="Ваше имя:")
+                    p
+                        input#phone(type="text", name="phone", placeholder="Ваш телефон:")
+                    p
+                        input#question(type="text", name="question", placeholder="Что Вас интересует?")
+                    input.btn-blue(type="submit", value="Оставить заявку")
+
+                .choose-city
+                    span.choose-city__label Выберите ваш город:
+                    .custom-select-row
+                        select#city-dropdown(name="city-dropdown")
+                            option(disabled="disabled", hidden="hidden", data-placeholder="true", selected="selected")
+                                | Выберите город
+                            option(value="Saint-Petersburg") Санкт-Петербург
+                            option(value="Moscow") Москва
+    // leave request section end
+
+    // site description section start
+    section.site-description-section
+        .site-wrapper
+            .site-description__text-section
+                p В настоящее время грузоперевозки в Санкт-Петербурге продолжают пользоваться большой популярностью.
+                    | Клиенту, обратившемуся в специализированную компанию, не нужно искать транспорт для доставки
+                    | материалов и грузов. Также автоматически отпадает потребность в поиске и найме специалистов, которые
+                    | могли бы гарантировать качественное и своевременное выполнение заданного объёма работ. Таким образом,
+                    | клиент экономит своё драгоценное время, силы и нервы. Сегодня предпочтение отдаётся тем компаниям,
+                    | которые способны предложить комплексные и эффективные решения.
+
+                h3 Почему наши предложения должны быть интересными?
+
+                p Судите сами. Скорее всего, Вы здесь, так как возникла потребность в решении следующих вопросов:
+                ul
+                    li Требуются грузоперевозки по области и Санкт-Петербургу;
+                    li Нужны квалифицированные специалисты для такелажных и стропальных работ, а также для выполнения
+                        | несложных и рутинных процессов, например, чистка территории от снега, выполнение общестроительных
+                        | операций;
+                    li Намечается квартирный, офисный, дачный переезд и срочно нужны погрузочно-разгрузочные работы и
+                        | надёжный транспорт, на котором будет выполнена доставка имущества на объект;
+                    li Нужно организовать масштабный переезд предприятия и выполнить перенос производственных мощностей,
+                        | оборудования и дорогостоящей техники на новую территорию;
+                    li Вы ищете надёжного партнёра, который сможет одинаково эффективно организовать и провести, как
+                        | погрузочные работы с последующей уборкой и вывозом мусора, так и предложить транспортные услуги
+                        | высокого качества.
+
+                h3 Сотрудничество с нами - это:
+                ul
+                    li Комплексный подход, который нацелен на оптимизацию затрат и получение желаемого результата в сжатые
+                        | сроки;
+                    li Профессионализм специалистов, позволяющий гарантировать сохранность Вашего имущества при проведении
+                        | работ и непосредственно в процессе транспортировки на объект, оперативное решение поставленных
+                        | задач и ответственность;
+                    li Решение задач любой степени сложности и масштаба. Мы готовы качественно выполнить, как уборку снега
+                        | на территории Вашего загородного дома, так и организацию переезда большого предприятия;
+                    li Демократичные цены, внимательное отношение и индивидуальный подход к каждому клиенту. Работать с
+                        | нами – не только выгодно, но и комфортно!
+
+                p На нашем сайте Вы можете найти дополнительную информацию по интересующим услугам. Если возникли вопросы,
+                    | то всегда можете обратиться за консультацией к нашему менеджеру, который всё подробно и доступно
+                    | расскажет. Ждём Ваших звонков! Будем рады постоянным и новым клиентам!
+
+            .site-description__thanks-letters
+                h2 Благодарственные письма:
+                .thanks-letters-gallery.js-thanks-letters-gallery
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+                    a.thanks-letters-gallery_letter-item(href="images/thanks-letter.jpg")
+                        img(src="images/thanks-letter.jpg")
+    // site description section end
