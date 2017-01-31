@@ -41,7 +41,7 @@ body {
 }
 
 .site-wrapper {
-  @include outer-container-fixed( 1140px );
-  min-width: 1140px;
+  @include outer-container-fixed( 1250px );
+  min-width: 1250px;
   position: relative;
 }

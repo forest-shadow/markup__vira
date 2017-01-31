@@ -6,6 +6,7 @@ footer.site-footer {
   border-top: 2px solid $light-blue;
   padding: 25px 0;
   color: #fff;
+  min-width: 1250px;
 
   .site-wrapper {
     width: 1250px;
@@ -32,12 +33,14 @@ footer.site-footer {
     }
   }
 
-  a.btn-blue {
-    margin-bottom: 42px;
+  a.btn {
+    margin-bottom: 40px;
     font-weight: bold;
+    border: 2px solid #fff;
+    background: #5091CD;
 
     @include haf-pseudo {
-      background: #5091CD;
+      background: #103889;
     }
   }
 
@@ -75,7 +78,7 @@ footer.site-footer {
 
       li {
         padding-left: 14px;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
 
         &:before {
           color: $light-blue;
@@ -97,12 +100,16 @@ footer.site-footer {
 .site-footer__contacts-block {
   a.contacts-block__phone {
     font-family: "Russo One", sans-serif;
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 22px;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     display: block;
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
 
     span {
       color: $light-blue;
@@ -141,7 +148,7 @@ footer.site-footer {
   }
 
   .developed {
-    margin-top: 32px;
+    margin-top: 22px;
     color: #fff;
 
     a {

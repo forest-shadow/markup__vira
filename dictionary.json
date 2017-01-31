@@ -1,5 +1,7 @@
 {
     "index.html":                   "Разводящая страница",
     "01_bourbon_template.html":     "Тестовая страница с Bourbon Refills",
-    "02_basic_layout.html":         "Базовая разметка"
+    "02_basic_layout.html":         "Базовая разметка",
+    "03_home-page.html":            "Главная",
+    "04_about.html":                "О компании"
 }

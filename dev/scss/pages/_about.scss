@@ -1,0 +1,142 @@
+/*********************************************
+ * About Page Styles
+ *********************************************/
+.content-section__container {
+  display: flex;
+  @include justify-content( 'space-between' );
+}
+
+article.contetent-section__content-block {
+  width: 850px;
+  margin-right: 60px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  strong {
+    color: #103B8A;
+  }
+}
+
+aside.contetent-section__aside-block-container {
+  width: 340px;
+}
+
+section.aside-block {
+  @include linear-gradient( $dark-blue, $blue );
+  border: 4px solid #D4EFFC;
+  margin-bottom: 15px;
+  
+  h3 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+
+.aside-block__additional-services,
+.aside-block__send-request {
+  padding: 10px 12px 16px;
+
+  h3 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+  }
+  
+  ul {
+    margin-bottom: 0;
+
+    li {
+      padding: 7px 0;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+
+      &:before {
+        top: 4px;
+        left: -20px;
+        color: #5091CD;
+        font-size: 18px;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+
+      @include haf-pseudo {
+        color: #5091CD;
+      }
+    }
+  }
+}
+
+.aside-block__send-request {
+  padding-bottom: 18px;
+
+  form {
+    input {
+      border-radius: 0;
+      border: 2px solid #2D5A88;
+      height: 45px;
+      padding: 0 14px;
+
+      @include haf-pseudo {
+        border: 2px solid darken( #2D5A88, 10% );
+      }
+
+      @include placeholder {
+        font-size: 17px;
+        color: #2D5A88;
+      }
+    }
+
+    textarea {
+      border-radius: 0;
+      border: 2px solid #2D5A88;
+      padding: 6px 14px;
+      resize: none;
+      font-size: 17px;
+      color: #2D5A88;
+
+      @include haf-pseudo {
+        border: 2px solid darken( #2D5A88, 10% );
+      }
+
+      @include placeholder {
+        font-size: 17px;
+        color: #2D5A88;
+      }
+    }
+
+    input[type="submit"] {
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.aside-block__aside-banner {
+  a {
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+}

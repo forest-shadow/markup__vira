@@ -1,0 +1,53 @@
+/*********************************************
+ * Breadcrumbs Section
+ *********************************************/
+section.breadcrumbs {
+  background: #F0F1F1;
+  padding: 16px 0 18px;
+  margin-bottom: 20px;
+
+  .site-wrapper {
+    width: 1250px;
+  }
+
+  ul {
+    margin-left: 0;
+    position: relative;
+    @include clearfix;
+    margin-bottom: 0;
+
+    li {
+      float: left;
+      list-style-type: none;
+      padding-left: 0;
+
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: '/';
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      a {
+        color: #106cb3;
+        text-decoration: none;
+
+        &.active {
+          text-decoration: underline;
+        }
+        
+        @include haf-pseudo {
+          color: darken( #106cb3, 10% );
+        }
+      }
+    }
+  }
+}

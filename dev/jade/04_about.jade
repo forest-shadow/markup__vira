@@ -1,0 +1,58 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+    - var PageTitle         = "О компании"
+    - var MetaDesc          = "Meta Description for current page!!!"
+    - var jQuery            = true
+    - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+    - var thisPage          = "Scaffold Startup"
+    - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+    
+block content
+    // breadcrumbs section starts
+    section.breadcrumbs
+        .site-wrapper
+            ul
+                +navListItem( "Главная" )
+                li
+                    a.active( href="#" ) О компании
+    // breadcrumbs section ends
+    // content section start
+    section#content-section.content-section
+        .site-wrapper
+            .content-section__container
+                article.contetent-section__content-block
+                    h1 О компании
+                    p Такелажная компания «Vira» предлагает своим клиентам полный комплекс услуг по перемещению оборудования для нужд полиграфических, медицинских учреждений и промышленных предприятий. Также мы оказываем транспортные услуги и проводим погрузочно-разгрузочные работы любой степени сложности. Если Вам нужно организовать переезд, есть потребность в перемещении оборудования, необходимы надёжный транспорт и компетентные специалисты, то мы всегда к Вашим услугам.
+                    p За время работы на рынке компания «Vira» зарекомендовала себя как добросовестный и опытный партнёр. Мы выполняем взятые на себя обязательства, дорожим репутаций и решаем поставленные задачи точно в срок. Нам доверяют как физические, так и юридические лица, которые высоко ценят качество и профессионализм.
+                    h2 Такелажные работы в Санкт-Петербурге: быстро, качественно и надежно
+                    p <strong>Такелаж</strong> – это целый комплекс мероприятий, включающий в себя: погрузку, разгрузку, монтаж и демонтаж оборудования, его последующее перемещение в различных плоскостях. Чаще всего действовать приходится в закрытых помещениях и в стеснённых условиях. Разумеется, для наших специалистов это не является проблемой. При необходимости используются специальные устройства, конструкции и механизмы, подходящие по размеры проёмов и перемещаемых объектов.
+                    p Прежде, чем приступить к выполнению работ, проводится тщательное планирование, позволяющее создать чёткий и понятный план действий, помогающее точно подсчитать необходимое количество материалов и специальных устройств. Всю деятельность специалистов координирует и контролирует опытный бригадир, который проследит за соблюдением правил безопасности и выполнением всех операций точно в срок.
+                // aside block starts
+                aside.contetent-section__aside-block-container
+                    section.aside-block.aside-block__additional-services
+                        h3 Дополнительные услуги
+                        ul
+                            +navListItem( "Такелаж оборудования" )
+                            +navListItem( "Перевозка оборудования" )
+                            +navListItem( "Перемещение станков" )
+                            +navListItem( "Стропальные работы" )
+                            +navListItem( "Подъем домов" )
+                            +navListItem( "Подъем грузов" )
+                            +navListItem( "Услуги такелажников" )
+                    section.aside-block.aside-block__send-request
+                        h3 Оставить заявку
+                        form#send-request-form
+                            p
+                                input(type="text", name="name", placeholder="Ваше имя:")
+                            p
+                                input(type="text", name="phone", placeholder="Ваш телефон:")
+                            p
+                                textarea(type="text", name="message", placeholder="Что вас интересует?")
+                            input.btn.btn-blue--inverted-colors(type="submit", value="Оставить заявку")
+                    section.aside-block.aside-block__aside-banner
+                        a(href="#")
+                            img(src="images/aside__banner.jpg")
+                // aside block finish
+    // content section end

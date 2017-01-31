@@ -1,7 +1,7 @@
 /*********************************************
  * Buttons Styles
  *********************************************/
-.btn-blue {
+.btn {
   width: 100%;
   border: 2px solid #fff;
   text-align: center;
@@ -11,8 +11,11 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: 18px;
+}
+
+.btn-blue {
   background: #103889;
-  
+
   @include haf-pseudo {
     color: #fff;
     background: darken( $light-blue, 10% );
@@ -32,5 +35,17 @@
       color: #fff;
       background: #5091CD;
     }
+  }
+}
+
+.btn-blue--inverted-colors,
+input.btn-blue--inverted-colors[type="submit"] {
+  background: #5091cd;
+  border: 2px solid #103889;
+
+  @include haf-pseudo {
+    color: #fff;
+    background: #103889;
+    border: 2px solid #fff;
   }
 }

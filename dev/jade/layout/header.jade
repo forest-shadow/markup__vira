@@ -14,8 +14,17 @@ header.site-header
                     a(href="#") Главная
                 li
                     a(href="#") О компании
+                    ul
+                        +navListItem( "Отзывы" )
+                        +navListItem( "Документы" )
+                        +navListItem( "Наши клиенты" )
                 li
                     a(href="#") Услуги
+                    ul
+                        li
+                            a(href="#") Такелажные работы
+                            ul
+                                +navListItem( "Такелажные работы в Санкт-Петербурге" )
                 li
                     a(href="#") Цены
                 li
@@ -28,9 +37,10 @@ header.site-header
         .site-info
             .site-info__info-row.site-info__info-row--phone
                 a.site-phone(href="tel:+79214051080") <span>+7 921</span> 405-10-80
+                a.site-phone(href="tel:+79523771292") <span>+7 952</span> 377-12-92
             .site-info__info-row.site-info__info-row--email
                 a.site-email(href="mailto:info@virgruz.ru") e-mail: info@virgruz.ru
-            a.btn-blue.js-leave-request(href="#") Оставить заявку
+            a.btn.btn-blue.js-leave-request(href="#") Оставить заявку
         // site top info block end
 
 // site header end

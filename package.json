@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/forest-shadow/gulp_scfld_jsb.git"
+    "url": "git+https://github.com/forest-shadow/gulp_scfld_jsb.git"
   },
   "author": "somebuddy",
   "license": "ISC",
@@ -36,5 +36,10 @@
     "streamqueue": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/forest-shadow/gulp_scfld_jsb/issues"
+  },
+  "homepage": "https://github.com/forest-shadow/gulp_scfld_jsb#readme",
+  "dependencies": {}
 }

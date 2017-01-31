@@ -4,6 +4,10 @@
 /*********************************************
  * Slider
  *********************************************/
+section.mainpage-slider {
+  min-width: 1250px;
+}
+
 .mainpage-slider__slide {
   height: 620px;
 
@@ -36,6 +40,7 @@ section.greetings-section {
   padding: 20px 0;
   text-align: center;
   color: #fff;
+  min-width: 1250px;
   
   h1 {
     font-size: 28px;
@@ -67,6 +72,7 @@ section.greetings-section {
 section.our-services {
   background: #E0E3E3;
   padding: 30px 0;
+  min-width: 1250px;
 
   h2 {
     font-size: 28px;
@@ -82,7 +88,7 @@ section.our-services {
   }
 
   .our-services-item {
-    @include size( 280px 430px );
+    @include size( 280px 442px );
     @include linear-gradient( #1F51A5, $dark-blue );
     @include border-color( #8BAFD9 #6C84B3 null #36356E );
     @include border-width( 1px 1px null 1px );
@@ -143,6 +149,7 @@ section.our-services {
  *********************************************/
 section.last-photo-galleries {
   padding: 30px 24px;
+  min-width: 1250px;
 
   h2 {
     font-size: 28px;
@@ -249,6 +256,7 @@ section.our-partners {
   @include border-style( solid null );
   @include border-width( 4px null );
   padding: 32px 28px;
+  min-width: 1250px;
   
   h2 {
     color: #fff;
@@ -290,6 +298,7 @@ section.our-partners {
  *********************************************/
 section.leave-request-block {
   background: #E0E3E3;
+  min-width: 1250px;
 
   .site-wrapper {
     padding: 40px 0 30px;
@@ -361,7 +370,6 @@ section.leave-request-block {
 
       input[type="submit"] {
         width: 100%;
-        border: 2px solid #fff;
         text-align: center;
         height: 60px;
         color: #fff;
@@ -369,16 +377,10 @@ section.leave-request-block {
         text-transform: uppercase;
         text-decoration: none;
         line-height: 18px;
-        background: #103889;
         font-size: 22px;
         font-weight: 500;
         border-radius: 0;
         margin-top: 4px;
-        
-        @include haf-pseudo {
-          border: 2px solid #103889;
-          background: lighten( #103889, 25% );
-        }
       }
     }
 
@@ -406,6 +408,7 @@ section.leave-request-block {
  *********************************************/
 section.site-description-section {
   padding: 20px 0 32px;
+  min-width: 1250px;
 
   .site-wrapper {
     @include clearfix();
@@ -413,7 +416,7 @@ section.site-description-section {
 
   .site-description__text-section {
     float: left;
-    width: 842px;
+    width: 920px;
     margin-right: 64px;
 
     h3 {
