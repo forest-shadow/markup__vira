@@ -1,0 +1,19 @@
+/*********************************************
+ * Clients Page Styles
+ *********************************************/
+/*********************************************
+ * Clients gallery
+ *********************************************/
+.clients-gallery {
+  @include outer-container();
+
+  .clients-gallery-item {
+    @include span-columns( 3 );
+    @include omega( 4n );
+    margin-bottom: 40px;
+
+    img {
+      text-align: center;
+    }
+  }
+}

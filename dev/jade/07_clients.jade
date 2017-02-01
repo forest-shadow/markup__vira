@@ -1,0 +1,66 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+    - var PageTitle         = "Наши клиенты"
+    - var MetaDesc          = "Meta Description for current page!!!"
+    - var jQuery            = true
+    - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+    - var thisPage          = "Scaffold Startup"
+    - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+    
+block content
+    // breadcrumbs section starts
+    section.breadcrumbs
+        .site-wrapper
+            ul
+                +navListItem( "Главная" )
+                +navListItem( "О компании" )
+                li
+                    a.active( href="#" ) Наши клиенты
+    // breadcrumbs section ends
+    // content section start
+    section#content-section.content-section
+        .site-wrapper
+            .content-section__container
+                article.contetent-section__content-block
+                    h1 Наши клиенты
+
+                    #clients-gallery.clients-gallery
+                        - for ( var i=0; i< 4; i++ ) {
+                            .clients-gallery-item
+                                img(src="images/partners-carousel__client01.png")
+                            .clients-gallery-item
+                                img(src="images/partners-carousel__client02.png")
+                            .clients-gallery-item
+                                img(src="images/partners-carousel__client05.png")
+                            .clients-gallery-item
+                                img(src="images/partners-carousel__client04.png")
+                        - }
+                // aside block starts
+                aside.contetent-section__aside-block-container
+                    section.aside-block.aside-block__additional-services
+                        h3 Дополнительные услуги
+                        ul
+                            +navListItem( "Такелаж оборудования" )
+                            +navListItem( "Перевозка оборудования" )
+                            +navListItem( "Перемещение станков" )
+                            +navListItem( "Стропальные работы" )
+                            +navListItem( "Подъем домов" )
+                            +navListItem( "Подъем грузов" )
+                            +navListItem( "Услуги такелажников" )
+                    section.aside-block.aside-block__send-request
+                        h3 Оставить заявку
+                        form#send-request-form
+                            p
+                                input(type="text", name="name", placeholder="Ваше имя:")
+                            p
+                                input(type="text", name="phone", placeholder="Ваш телефон:")
+                            p
+                                textarea(type="text", name="message", placeholder="Что вас интересует?")
+                            input.btn.btn-blue--inverted-colors(type="submit", value="Оставить заявку")
+                    section.aside-block.aside-block__aside-banner
+                        a(href="#")
+                            img(src="images/aside__banner.jpg")
+                // aside block finish
+    // content section end
