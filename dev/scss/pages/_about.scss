@@ -1,6 +1,9 @@
 /*********************************************
  * About Page Styles
  *********************************************/
+/*********************************************
+ * Content section
+ *********************************************/
 .content-section__container {
   display: flex;
   @include justify-content( 'space-between' );
@@ -28,6 +31,9 @@ article.contetent-section__content-block {
   }
 }
 
+/*********************************************
+ * Aside section
+ *********************************************/
 aside.contetent-section__aside-block-container {
   width: 340px;
 }

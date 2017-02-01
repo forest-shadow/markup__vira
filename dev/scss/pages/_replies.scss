@@ -1,18 +1,36 @@
 /*********************************************
  * Replies Page Styles
  *********************************************/
+/*********************************************
+ * Docs gallery
+ *********************************************/
 .docs-gallery {
   @include outer-container();
 
-  .docs-gallery-item {
+  a.docs-gallery-item {
     @include span-columns( 4 );
     @include omega( 3 );
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    
+    @include haf-pseudo {
+      span {
+        color: darken( #103889, 10% );
+      }
+    }
 
     img {
       display: block;
       width: 100%;
       border: 2px solid #1E4FA3;
+    }
+
+    span {
+      color: #103889;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
     }
   }
 }
