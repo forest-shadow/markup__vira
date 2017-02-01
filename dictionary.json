@@ -3,5 +3,8 @@
     "01_bourbon_template.html":     "Тестовая страница с Bourbon Refills",
     "02_basic_layout.html":         "Базовая разметка",
     "03_home-page.html":            "Главная",
-    "04_about.html":                "О компании"
+    "04_about.html":                "О компании",
+    "05_replies.html":              "Отзывы",
+    "06_docs.html":                 "Документы",
+    "07_partners.html":             "Партнеры"
 }
