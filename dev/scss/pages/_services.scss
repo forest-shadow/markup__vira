@@ -1,0 +1,153 @@
+/*********************************************
+ * Services Page Styles
+ *********************************************/
+/*********************************************
+ * Services Info section
+ *********************************************/
+.our-services-info {
+  padding: 30px 0 40px;
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  p {
+    text-align: center;
+
+    strong {
+      color: #103889;
+    }
+  }
+}
+
+/*********************************************
+ * Your question section
+ *********************************************/
+section.your-question {
+  padding: 30px 0;
+  background: #E0E3E3;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #5091CD;
+    font-weight: bold;
+    margin-bottom: 26px;
+  }
+
+  p {
+    text-align: center;
+    color: #3a3939;
+    font-size: 18px;
+    margin-bottom: 46px;
+    line-height: 24px;
+
+    a {
+      color: #103889;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  form {
+    @include outer-container( 1250px );
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+      @include span-columns( 3 );
+      @include omega( 4 );
+      margin-bottom: 0;
+    }
+
+    input {
+      border-radius: 0;
+      border: 2px solid #2D5A88;
+      height: 45px;
+      padding: 0 14px;
+      font-size: 20px;
+
+      @include haf-pseudo {
+        border: 2px solid darken( #2D5A88, 10% );
+      }
+
+      @include placeholder {
+        font-size: 20px;
+        color: #2D5A88;
+      }
+    }
+
+    input[type="submit"] {
+      font-weight: 400;
+    }
+
+  }
+}
+
+/*********************************************
+ * Our services section
+ *********************************************/
+section.our-services-container {
+  padding: 30px 0 50px;
+}
+
+section.service-type {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #103B8A;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(16, 59, 138, 0.5);
+    display: inline-block;
+    padding-right: 26px;
+    margin-bottom: 20px;
+  }
+
+  .services-items__container {
+    @include outer-container( 1250px );
+
+    a.service-item {
+      @include span-columns( 2.4 );
+      @include omega( 5n );
+      border-top: 1px solid #D4EFFC;
+      background: #1D2468;
+      height: 276px;
+      padding: 5px 5px 10px;
+      text-decoration: none;
+
+      img {
+        border: 2px solid #E0E3E3;
+        display: block;
+        height: 162px;
+        margin-bottom: 10px;
+      }
+      
+      h3 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: bold;
+        text-align: center;
+        height: 32px;
+        overflow: hidden;
+      }
+
+      span.btn {
+        display: block;
+        width: 192px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

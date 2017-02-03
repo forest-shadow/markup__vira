@@ -1,0 +1,73 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+  - var PageTitle         = "Наши Услуги"
+  - var MetaDesc          = "Meta Description for current page!!!"
+  - var jQuery            = true
+  - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+  - var thisPage          = "Scaffold Startup"
+  - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+
+block content
+  // our services info section starts
+  section#our-services-info.our-services-info
+    .site-wrapper
+      h1 Услуги
+      p Такелажные услуги от компании <strong>«ВИРА»</strong> — это широчайший спектр услуг по перевозке, транспортировке, перемещению, монтажу и отладке Вашего оборудования. <br> Не зависимо от того, что Вам необходимо сделать, сотрудники нашей компании выполнят все поставленные задачи.
+  // our services info section ends
+
+  // your questions section start
+  section#your-question.your-question
+    .site-wrapper
+      h2 У вас есть вопрос? Проконсультируем вас бесплатно!
+      p Звоните прямо сейчас по телефону: <a href="tel:+79214051080">+7 921 405-10-80</a><br> или заполните форму обратной связи и мы свяжемся с вами:
+      form#your-question-form
+        p
+          input(type="text", name="name", placeholder="Ваше имя:")
+        p
+          input(type="text", name="phone", placeholder="Ваш телефон:")
+        p
+          input(type="text", name="message", placeholder="Что вас интересует?")
+        p
+          input.btn.btn-blue--inverted-colors(type="submit", value="Оставить заявку")
+  // your questions section end
+  // our services section starts
+  section#our-services-container.our-services-container
+    .site-wrapper
+      section.service-type
+        h2.service-type__header Такелажные работы
+        .services-items__container
+          a.service-item( href="#" )
+            img( src="images/services-carousel__service-01.jpg" )
+            h3.service-item__header Такелажные работы<br> в Санкт-Петербурге
+            span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          a.service-item( href="#" )
+            img( src="images/services-carousel__service-02.jpg" )
+            h3.service-item__header Такелажные работы<br> в Москве
+            span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          - for( var i = 0; i < 3; i++ ) {
+            a.service-item( href="#" )
+              img( src="images/services-carousel__service-03.jpg" )
+              h3.service-item__header Такелажные работы<br> в Санкт-Петербурге
+              span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          - }
+
+      section.service-type
+        h2.service-type__header Такелажные
+        .services-items__container
+          a.service-item( href="#" )
+            img( src="images/services-carousel__service-01.jpg" )
+            h3.service-item__header Такелаж станков
+            span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          a.service-item( href="#" )
+            img( src="images/services-carousel__service-02.jpg" )
+            h3.service-item__header Такелаж оборудования
+            span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          - for( var i = 0; i < 3; i++ ) {
+            a.service-item( href="#" )
+              img( src="images/services-carousel__service-03.jpg" )
+              h3.service-item__header Такелажные работы<br> в Санкт-Петербурге
+              span.btn.btn-blue.btn-blue--smooth-hovered Подробнее
+          - }
+  // out services section ends

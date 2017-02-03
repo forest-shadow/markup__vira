@@ -6,5 +6,6 @@
     "04_about.html":                "О компании",
     "05_replies.html":              "Отзывы",
     "06_docs.html":                 "Документы",
-    "07_clients.html":              "Наши клиенты"
+    "07_clients.html":              "Наши клиенты",
+    "08_services.html":             "Наши услуги"
 }

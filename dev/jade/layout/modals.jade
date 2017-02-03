@@ -1,0 +1,15 @@
+#feedback-call-popup.feedback-call-form__container.mfp-hide.zoom-anim-dialog
+  form#feedback-call-form.white-popup-block
+    h1 Оставить заявку
+    h2 У вас есть вопрос? Проконсультируем вас бесплатно!
+    p Звоните прямо сейчас по телефону: <a href="tel:+79214051080">+7 921 405-10-80</a><br> или заполните форму обратной связи и мы свяжемся с вами:
+    fieldset
+      p
+        input#name(type="text", name="name", placeholder="Ваше имя:")
+      p
+        input#phone(type="text", name="phone", placeholder="Ваш телефон:")
+      p
+        textarea(name="message", placeholder="Что вас интересует?")
+      .formmessage
+      .inputs-row
+        input.btn.btn-blue--inverted-colors(type="submit", value="Отправить")
