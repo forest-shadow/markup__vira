@@ -1,0 +1,54 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+  - var PageTitle         = "Фотогалерея"
+  - var MetaDesc          = "Meta Description for current page!!!"
+  - var jQuery            = true
+  - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+  - var thisPage          = "Scaffold Startup"
+  - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+
+block content
+  // photogallery section starts
+  section#photo-galleries-section.photo-galleries-section
+    .site-wrapper
+      h1 Фотогалерея наших работ
+      .photo-galleries-list
+
+        .photo-galleries-item
+          span.photo-galleries-item__date 7 декабря 2016
+          a.photo-galleries-item__gallery-header(href="#") Такелажные работы
+          a.photo-galleries-item__gallery-thumb(href="#")
+            img(src="images/gallery-thumb-01.jpg")
+          .photo-galleries-item__desc Такелажные работы: разгрузка и <span>перемещение станка</span> по цеху весом 12 тонн на
+            | ул. Трефолева, 12 в Санкт-Петербурге.
+          .photo-galleries-item__customer.photo-galleries-item__customer--private-person
+            span.customer-label Заказчик:
+            img(src="images/icons/person.png")
+            span.private-person-label частное лицо
+
+        .photo-galleries-item
+          span.photo-galleries-item__date 7 декабря 2016
+          a.photo-galleries-item__gallery-header(href="#") Перевозка сейфов
+          a.photo-galleries-item__gallery-thumb(href="#")
+            img(src="images/gallery-thumb-02.jpg")
+          .photo-galleries-item__desc Такелажные работы: <span>перевозка сейфов</span> (2 шт. по 800кг.) с Большого
+            | Сампсониевского пр., 14 на Комендатский пр., 36  в Санкт-Петербурге.
+          .photo-galleries-item__customer
+            span.customer-label Заказчик:
+            img(src="images/customer-logo.png")
+
+        .photo-galleries-item
+          span.photo-galleries-item__date 7 декабря 2016
+          a.photo-galleries-item__gallery-header(href="#") Подъем груза в окно
+          a.photo-galleries-item__gallery-thumb(href="#")
+            img(src="images/gallery-thumb-03.jpg")
+          .photo-galleries-item__desc Такелажные работы: разгрузка и <span>перемещение станка</span> по цеху весом 12 тонн на
+            | ул. Трефолева, 12 в Санкт-Петербурге.
+          .photo-galleries-item__customer.photo-galleries-item__customer--private-person
+            span.customer-label Заказчик:
+            img(src="images/icons/person.png")
+            span.private-person-label частное лицо
+
+  // photogallery section ends
