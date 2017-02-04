@@ -1,0 +1,57 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+    - var PageTitle         = "Контакты"
+    - var MetaDesc          = "Meta Description for current page!!!"
+    - var jQuery            = true
+    - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+    - var thisPage          = "Scaffold Startup"
+    - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+    
+block content
+    // contacts section starts
+    section#contacts-section.contacts-section
+        .site-wrapper
+            h1 Контакты:
+            .contacts-blocks-container
+
+                .contacts-block
+                    h3 Санкт-Петербург:
+                    .contacts-list
+                        .contacts-row
+                            span.contacts-row__contacts-label Адрес:
+                            span.contacts-row__contacts-info Cанкт-Петербург, ул. Воздухоплавательная, 2
+                        .contacts-row
+                            span.contacts-row__contacts-label Телефон:
+                            span.contacts-row__contacts-info +7 921 405-10-80
+                        .contacts-row
+                            span.contacts-row__contacts-label E-mail:
+                            span.contacts-row__contacts-info info@virgruz.ru
+                .contacts-block
+                    h3 Другие Регионы:
+                    .contacts-list
+                        .contacts-row
+                            span.contacts-row__contacts-label Великий Новгород:
+                            span.contacts-row__contacts-info +7 931 850-20-32
+                        .contacts-row
+                            span.contacts-row__contacts-label Псков:
+                            span.contacts-row__contacts-info +7 931 850-20-32
+    // contacts section ends
+    // your questions section start
+    section#your-question.your-question
+        .site-wrapper
+          h2 У вас есть вопрос? Проконсультируем вас бесплатно!
+          p Звоните прямо сейчас по телефону: <a href="tel:+79214051080">+7 921 405-10-80</a><br> или заполните форму обратной связи и мы свяжемся с вами:
+          form#your-question-form
+            p
+              input(type="text", name="name", placeholder="Ваше имя:")
+            p
+              input(type="text", name="phone", placeholder="Ваш телефон:")
+            p
+              input(type="text", name="message", placeholder="Что вас интересует?")
+            p
+              input.btn.btn-blue--inverted-colors(type="submit", value="Оставить заявку")
+    // your questions section end
+
+    include modules/location

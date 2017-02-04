@@ -1,29 +1,30 @@
-section.contacts__yandex-map-block
+section#yandex-map-block.yandex-map-block
     script(src="//api-maps.yandex.ru/2.0/?load=package.standard,package.traffic&lang=ru")
     script.
         ymaps.ready(init); 
         function init() { 
-            var coord = [ 59.925881, 30.378608 ]; 
+            var coord = [ 59.895566, 30.3400393 ];
             var map = new ymaps.Map(
                     'yandex-map', 
                     {
-                        center: [ 59.925881, 30.378608 ],
-                        zoom: 15,controls: [ 'mapTools' ]
+                        center: [ 59.895566, 30.3400393 ],
+                        zoom: 15,
+                        controls: [ 'mapTools' ]
                     } );
-            var myPlacemark = new ymaps.Placemark( 
-                    coord, 
-                    { 
-                        'balloonContent': "FlatFond, Невский пр. 147",
-                        'balloonHeader': "Санкт-Петербург, Невский пр. 147"
-                    }, 
-                    { 
-                        'iconImageHref': "images/icons/balloon.png", 
-                        'iconImageSize': [39,58], 
-                        'iconImageOffset': [-20, -55]  
-                    } ); 
+            var myPlacemark = new ymaps.Placemark(
+                coord,
+                {
+                  hintContent: 'Vira: г. Санкт-Петербург, ул.Воздухоплавательная, 2',
+                  'balloonContent': "Vira: г. Санкт-Петербург, ул.Воздухоплавательная, 2",
+                  'balloonHeader': "г. Санкт-Петербург, ул.Воздухоплавательная, 2"
+                },
+                {
+                  preset: 'islands#icon',
+                  iconColor: '#0095b6'
+                } );
             map.geoObjects.add(myPlacemark); 
             map.controls.add('zoomControl');
         }
 
-    h2.section-header Местоположение
+    h2.section-header Мы на карте:
     #yandex-map

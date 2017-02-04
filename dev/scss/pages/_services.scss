@@ -41,7 +41,7 @@ section.your-question {
     text-align: center;
     color: #3a3939;
     font-size: 18px;
-    margin-bottom: 46px;
+    margin-bottom: 28px;
     line-height: 24px;
 
     a {
@@ -69,6 +69,7 @@ section.your-question {
       height: 45px;
       padding: 0 14px;
       font-size: 20px;
+      margin-bottom: 0;
 
       @include haf-pseudo {
         border: 2px solid darken( #2D5A88, 10% );
