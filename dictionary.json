@@ -7,5 +7,8 @@
     "05_replies.html":              "Отзывы",
     "06_docs.html":                 "Документы",
     "07_clients.html":              "Наши клиенты",
-    "08_services.html":             "Наши услуги"
+    "08_services.html":             "Наши услуги",
+    "09_photogallery.html":         "Фотогалереи",
+    "10_contacts.html":             "Контакты",
+    "11_prices":                    "Цены"
 }

@@ -1,0 +1,41 @@
+/*********************************************
+ * Prices Page Styles
+ *********************************************/
+/*********************************************
+ * Prices section
+ *********************************************/
+section.prices-section {
+  padding: 0 0 40px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  strong {
+    color: #103B8A;
+  }
+
+  table {
+    border: 1px solid #ddd;
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
