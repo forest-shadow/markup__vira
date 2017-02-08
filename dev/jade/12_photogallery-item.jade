@@ -1,0 +1,44 @@
+extends layout/site-layout
+include modules/mixins
+
+append config
+  - var PageTitle         = "Фотогалерея"
+  - var MetaDesc          = "Meta Description for current page!!!"
+  - var jQuery            = true
+  - var updateBodyClass   = BodyClasses.push( 'extraclass', 'secondclass' )
+  - var thisPage          = "Scaffold Startup"
+  - var PageTitle         = PageTitle.concat(' | ' + thisPage)
+
+block content
+  // breadcrumbs section starts
+  section.breadcrumbs
+      .site-wrapper
+          ul
+              +navListItem( "Главная" )
+              +navListItem( "Фотогалерея" )
+              li
+                  a.active( href="#" ) Такелажные работы
+  // breadcrumbs section ends
+  // photogallery section starts
+  section#photo-gallery-section.photo-gallery-section
+    .site-wrapper
+      h1 Такелаж оборудования
+      section.photogallery-desc
+        .photogallery-desc__thumb
+          img(src="images/gallery-thumb-01.jpg")
+        .photogallery-desc__gallery-desc
+          span.gallery-desc__desc-header Описание работ:
+          .gallery-desc__desc-text
+            p Такелажные работы: разгрузка и перемещение станка по цеху весом 12 тонн на ул. Трефолева, 12 в Санкт-Петербурге.
+          .gallery-desc__customer
+            span.customer-label Заказчик:
+            img(src="images/customer-logo.png")
+      section#photogallery.photogallery
+        - for( var i = 0; i<16; i++ ) {
+        a.photogallery-item(href="images/gallery-thumb-01.jpg")
+          img(src="images/gallery-thumb-01.jpg")
+        - }
+
+
+
+  // photogallery section ends

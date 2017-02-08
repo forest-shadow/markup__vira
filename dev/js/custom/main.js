@@ -42,7 +42,7 @@ $( document ).ready( function(){
     } );
 
     // initialize thanks letters gallery
-    $( '.js-thanks-letters-gallery' ).magnificPopup({
+    $( '.js-thanks-letters-gallery, #photogallery' ).magnificPopup({
         delegate: 'a',
         type: 'image',
         tLoading: 'Loading image #%curr%...',

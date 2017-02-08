@@ -10,5 +10,6 @@
     "08_services.html":             "Наши услуги",
     "09_photogallery.html":         "Фотогалереи",
     "10_contacts.html":             "Контакты",
-    "11_prices":                    "Цены"
+    "11_prices.html":               "Цены",
+    "12_photogallery-item.hml":     "Фотогалерея"
 }
